@@ -30,8 +30,10 @@ class Application
       return "#{search_term} is one of our items"
     elsif @@cart.empty?
       return "Your cart is empty"
-    else
+    elsif
       return "Couldn't find #{search_term}"
+    else @@cart.empty?
+      return "Your cart is empty"
     end
   end
 
