@@ -25,6 +25,7 @@ class Application
       return "#{search_term} is one of our items"
     else
       return "Couldn't find #{search_term}"
+      @@items << "#{search_term}"
     end
   end
 end
